@@ -19,3 +19,4 @@ def is_discord_webhook(webhook: str):
 class Customer(models.Model):
     user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)
     webhook = models.TextField(validators=[is_discord_webhook])
+
